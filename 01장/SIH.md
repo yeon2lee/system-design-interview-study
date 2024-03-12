@@ -53,6 +53,7 @@
 콘텐츠 전송 네트워크(CDN)
 ---
 <img src="img/Clustering2.png" width="500" height="500"/>
+
 정적 콘텐츠를 전송하는 데 쓰이는 지리적으로 분산된 서버의 네트워크 (이미지, 비디오, css, js 파일 등 캐싱 가능)
 가까운 CDN 서버가 정적 콘텐츠 전달
 
@@ -70,12 +71,14 @@ CDN 사용 시 고려해야 할 사항
 
 상태 정보 의존적인 아키텍쳐
 <img src="img/Stateless1.png" width="500" height="500"/>
+
 - 항상 같은 클라이언트로부터의 요청이 항상 같은 서버로 전송 되어야 함
     - 로드 밸런스에서 고정 세선(sticky session) 기능을 제공하지만 이는 로드밸런스에 부담을 줌
     - 서버를 추가/제거 하기도 까다로움
 
 무상태 아키텍처
 <img src="img/Stateless2.png" width="500" height="500"/>
+
 - 공유 저장소로부터 상태 정보를 가져옴
 - 단순하고 안정적이며 규모 확장이 쉬움
 
@@ -91,7 +94,7 @@ CDN 사용 시 고려해야 할 사항
 
 메세지 큐
 --
-<img src="img/Message1.png" width="500" height="500"/>
+<img src="img/Message1.png" width="500" height="200"/>
 
 Pub/Sub 구조
 
