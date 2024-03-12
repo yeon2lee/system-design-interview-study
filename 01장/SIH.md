@@ -134,6 +134,7 @@ Pub/Sub 구조
   - 비용
 수평적 확장 / sharding
 <img src="img/Sharding1.png" width="500" height="500"/>
+
 - 대규모 DB를 샤드(shard)라고 부르는 작은 단위로 분할하는 기술
 - 모든 샤드는 같은 스키마 사용 but 보관되는 데이터 사이에는 중복 없음
 - 샤딩 고려사항
