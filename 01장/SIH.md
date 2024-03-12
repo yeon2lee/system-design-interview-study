@@ -1,4 +1,4 @@
-## 사용자 수에 따른 규모 확장성
+# 사용자 수에 따른 규모 확장성
 단일서버
 ---
 웹 - 앱 - 데이터베이스 - 캐시 등이 한 서버에서 동작
@@ -32,7 +32,7 @@
 - 쓰기 연간은 주서버에서만 가능, 부서버는 읽기 연산 지원
 - 더 나은 성능, 안정성, 가용성
 
-<img src="img/Clustering1.png" width="500" height="500"/>
+<img src="images/Clustering1.png" width="500" height="500"/>
 
 - 사용자는 DNS로부터 로드밸런서의 공개 IP 주소를 받음.
 - 사용자는 해당 IP 주소를 사용해 로드밸런서에 접속.
@@ -53,7 +53,7 @@
 
 콘텐츠 전송 네트워크(CDN)
 ---
-<img src="img/Clustering2.png" width="500" height="300"/>
+<img src="images/Clustering2.png" width="500" height="300"/>
 
 정적 콘텐츠를 전송하는 데 쓰이는 지리적으로 분산된 서버의 네트워크 (이미지, 비디오, css, js 파일 등 캐싱 가능)
 가까운 CDN 서버가 정적 콘텐츠 전달
@@ -71,14 +71,14 @@ CDN 사용 시 고려해야 할 사항
 이상적인 전략은 상태 정보를 RDBMS나 NoSQL 같은 지속성 저장소에 보관하고 가져오는 것!!!!
 
 상태 정보 의존적인 아키텍쳐<br/>
-<img src="img/Stateless1.png" width="500" height="500"/>
+<img src="images/Stateless1.png" width="500" height="500"/>
 
 - 항상 같은 클라이언트로부터의 요청이 항상 같은 서버로 전송 되어야 함
     - 로드 밸런스에서 고정 세선(sticky session) 기능을 제공하지만 이는 로드밸런스에 부담을 줌
     - 서버를 추가/제거 하기도 까다로움
 
 무상태 아키텍처<br/>
-<img src="img/Stateless2.png" width="500" height="500"/>
+<img src="images/Stateless2.png" width="500" height="500"/>
 
 - 공유 저장소로부터 상태 정보를 가져옴
 - 단순하고 안정적이며 규모 확장이 쉬움
@@ -95,7 +95,7 @@ CDN 사용 시 고려해야 할 사항
 
 메세지 큐
 --
-<img src="img/Message1.png" width="500" height="200"/>
+<img src="images/Message1.png" width="500" height="200"/>
 
 Pub/Sub 구조
 
@@ -111,7 +111,7 @@ Pub/Sub 구조
 로그, 메트릭 그리고 자동화
 ---
 
-<img src="img/Message2.png" width="500" height="500"/>
+<img src="images/Message2.png" width="500" height="500"/>
 
 로그, 메트릭, 자동화 + 메세지큐 적용 아키텍
 로그 
@@ -134,7 +134,8 @@ Pub/Sub 구조
   - SPOF
   - 비용
 수평적 확장 / sharding
-<img src="img/Sharding1.png" width="500" height="500"/>
+  - 
+<img src="images/Sharding1.png" width="500" height="500"/>
 
 - 대규모 DB를 샤드(shard)라고 부르는 작은 단위로 분할하는 기술
 - 모든 샤드는 같은 스키마 사용 but 보관되는 데이터 사이에는 중복 없음
